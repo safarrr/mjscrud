@@ -41,7 +41,7 @@ export async function PATCH(req: NextRequest, context: { params: any }) {
     const existingUser = await db.query.users.findFirst({
       where: (user) => eq(user.username, parsed.data?.username),
     });
-    if (existingUser) {
+    if (existingUser && existingUser.username !== parsed.data?.username) {
       return NextResponse.json(
         { error: "username sudah ada" },
         { status: 400 }

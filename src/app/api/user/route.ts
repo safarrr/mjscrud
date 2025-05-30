@@ -1,7 +1,7 @@
-import { createUserSchema } from "@/components/sheetUserCreate";
 import { db } from "@/db";
 import { addresses, users } from "@/db/schema";
 import { checkBearer } from "@/lib/auth";
+import { createUserSchema } from "@/lib/typs/createUserSchema";
 import { hashPassword } from "@/lib/utils";
 import { count, eq } from "drizzle-orm";
 import { NextRequest, NextResponse } from "next/server";
