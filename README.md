@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+.env
+
+```
+DATABASE_URL=
+JWT_SECRET=
+```
+
 ## Getting Started
 
 First, run the development server:
