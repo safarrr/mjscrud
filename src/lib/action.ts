@@ -7,20 +7,13 @@ import { verifyPassword } from "./utils";
 import { db } from "@/db";
 import { users } from "@/db/schema";
 import { redirect } from "next/navigation";
+import { LoginFormState } from "./typs/loginFormState";
 const schema = z.object({
   username: z
     .string()
     .min(3, { message: "Username must be at least 3 characters" }),
   password: z.string(),
 });
-export type LoginFormState = {
-  errors: {
-    username?: string[];
-    password?: string[];
-    general?: string[];
-  };
-  success: boolean;
-};
 
 export const login = async (
   prevState: LoginFormState,

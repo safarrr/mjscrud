@@ -5,8 +5,6 @@ import { checkBearer } from "@/lib/auth";
 import { hashPassword } from "@/lib/utils";
 import { count, eq } from "drizzle-orm";
 import { NextRequest, NextResponse } from "next/server";
-import z from "zod";
-
 export async function GET(request: NextRequest) {
   try {
     await checkBearer(request);

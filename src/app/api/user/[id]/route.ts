@@ -23,14 +23,10 @@ const updateUserSchema = z.object({
     .optional(),
 });
 
-type UpdateUserInput = z.infer<typeof updateUserSchema>;
-export async function PATCH(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function PATCH(req: NextRequest, context: { params: any }) {
   await checkBearer(req);
 
-  const userId = params.id;
+  const userId = context.params.id;
 
   try {
     const body = await req.json();
@@ -99,13 +95,10 @@ export async function PATCH(
     );
   }
 }
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function DELETE(request: NextRequest, { params }: any) {
   try {
     await checkBearer(request);
-    const { id } = await params;
+    const id = params.id;
     const isValid = await db.query.users.findFirst({
       where: eq(users.id, id),
     });

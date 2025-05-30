@@ -3,9 +3,7 @@
 import { cookies } from "next/headers";
 import { verify } from "jsonwebtoken";
 import jwt from "jsonwebtoken";
-
 import { UserType } from "./typs/user";
-
 export async function getUserSever() {
   const cookieStore = await cookies();
   let dataUser: { user: UserType; token: string } | null = null;
@@ -26,7 +24,6 @@ export async function getUserSever() {
           username: decodedPayload.username!,
           firstname: decodedPayload.firstname!,
           lastname: decodedPayload.lastname!,
-          hashPassword: decodedPayload.hashPassword!,
         },
       };
     }

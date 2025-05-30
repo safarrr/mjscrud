@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
+
 import { Label } from "@radix-ui/react-label";
 import { Card, CardContent } from "./ui/card";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "./ui/sheet";

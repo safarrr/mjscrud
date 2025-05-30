@@ -1,4 +1,5 @@
 "use client";
+import { LoginFormState } from "@/lib/typs/loginFormState";
 import { Button } from "./ui/button";
 import {
   Card,
@@ -9,7 +10,7 @@ import {
 } from "./ui/card";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { login, LoginFormState } from "@/lib/action";
+import { login } from "@/lib/action";
 import { useActionState } from "react";
 const initialState: LoginFormState = {
   errors: {},
