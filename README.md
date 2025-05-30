@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# demo
+
+[mjscrud-a1s5.vercel.app](mjscrud-a1s5.vercel.app)
 .env
 
 ```
