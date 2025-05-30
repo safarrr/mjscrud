@@ -7,7 +7,7 @@ import z from "zod";
 import { NextRequest, NextResponse } from "next/server";
 import { hashPassword } from "@/lib/utils";
 
-export const updateUserSchema = z.object({
+const updateUserSchema = z.object({
   username: z.string().max(150),
   firstname: z.string().max(255),
   lastname: z.string().max(255),
