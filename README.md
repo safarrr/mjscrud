@@ -2,7 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # demo
 
-[mjscrud-a1s5.vercel.app](mjscrud-a1s5.vercel.app)
+[https://mjscrud-a1s5.vercel.app/](https://mjscrud-a1s5.vercel.app/)
+
 .env
 
 ```
