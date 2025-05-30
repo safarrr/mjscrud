@@ -23,7 +23,7 @@ const updateUserSchema = z.object({
     .optional(),
 });
 
-export type UpdateUserInput = z.infer<typeof updateUserSchema>;
+type UpdateUserInput = z.infer<typeof updateUserSchema>;
 export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }
